@@ -1,5 +1,10 @@
 #讀取檔案
 products = []
+with open('products.csv','r',encoding='utf-8-sig') as f:
+	for line in f:
+		name, price = line.strip().split(',')
+		products.append([name,price])
+print(products)
 
 #使用者輸入資料
 while True:
