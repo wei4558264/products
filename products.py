@@ -2,6 +2,8 @@
 products = []
 with open('products.csv','r',encoding='utf-8-sig') as f:
 	for line in f:
+		if '水果,價錢' in line:
+			continue
 		name, price = line.strip().split(',')
 		products.append([name,price])
 print(products)
